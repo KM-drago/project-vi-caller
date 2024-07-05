@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vi-Call</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-200 min-h-screen">
+    <div class="content-center justify-center">
+      <h1 class="text-center text-neutral-800 font-bold text-5xl mt-10">Vi-Call</h1>
+    </div>
+    <div class="grid grid-rows-1 grid-flow-col gap-4 m-10">
+      <div>
+        <div id="user-name"></div>
+        <button id="call" class="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded">Call</button>
+        <video class="w-full rounded" id="local-vid" autoplay controls>Your browser does not support the video tag.</video>
+      </div>
+      <div>
+        <video class="w-full rounded" id="remote-vid" autoplay controls>Your browser does not support the video tag.</video>
+      </div>
+    </div>
+  </body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="scripts.js"></script>
+  <script src="socketListeners.js"></script>
+</html>
